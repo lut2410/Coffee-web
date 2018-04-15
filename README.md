@@ -1,2 +1,1 @@
-# Coffee-web
-for employer and employees
+# Coffee web
