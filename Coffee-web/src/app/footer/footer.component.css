@@ -1,0 +1,10 @@
+footer {
+    text-align:center;
+    /* padding:20px 0; */
+    font-size: 12px;
+    font-style: italic;
+    border-top: 2px solid #eee;
+    position:fixed;
+    bottom:0;
+    width:100vw
+    }

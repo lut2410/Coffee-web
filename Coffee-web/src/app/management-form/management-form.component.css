@@ -1,0 +1,76 @@
+.container {
+  margin: 0px;
+  max-width: -webkit-fill-available;
+}
+
+.wrapper {
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #e7e7e7;
+  height: 78vh;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper label {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  left: 40%;
+  background: white;
+  padding: 0px 1px;
+  margin: 0px;
+  font-size: larger;
+  font-style: italic;
+  color: gray;
+}
+
+div.input {
+  position: relative;
+  margin-top: 10px;
+
+}
+div.input-border{
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+div.input label {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  left: 10px;
+  background: white;
+  padding: 5px 2px;
+  font-size: x-small;
+}
+
+.table-bill {
+  overflow: hidden;
+  border-top: 1px solid #e7e7e7;
+}
+
+.text-center {
+  vertical-align: middle;
+}
+
+.table-bill .row-infor {
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.table-bill .right {
+  width: 280px;
+  float: right;
+}
+
+.lbl {
+  width: 150px;
+  float: left;
+  text-align: right;
+}
+
+.fee {
+  float: right;
+}

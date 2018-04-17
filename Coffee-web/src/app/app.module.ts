@@ -19,6 +19,8 @@ import { TableService } from './service/table.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { FoodService } from './service/food.service';
+import { CategoryFoodService } from './service/category-food.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
     HeaderComponent,
     FooterComponent,
     LoginFormComponent,
-    ManagementFormComponent
+    ManagementFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +37,9 @@ import { LoginFormComponent } from './login-form/login-form.component';
     HttpModule,
     AppRoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryCategory, { delay: 500 }),
-  ],
+    ],
   providers: [AuthService, AuthGuardService, AuthHttpService,
-    TableService],
+    TableService,CategoryFoodService,FoodService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,13 @@
+.container {
+    margin: 10px;
+    max-width: -webkit-fill-available;
+  }
+  header {
+    text-align:center;
+    /* padding:20px 0; */
+    font-size:30px;
+    border-bottom: 2px solid #eee;
+    }
+    align-left{
+        text-align: left
+    }

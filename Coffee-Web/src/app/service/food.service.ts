@@ -1,28 +1,28 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { FoodModel } from '../model/food';
 import { AuthHttpService } from '../auth/auth-http.service';
-import { TableModel } from '../model/table';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class TableService {
-  private API_PATH = '/api/table/';
+export class FoodService {
+  private API_PATH = '/api/food/';
 
   constructor(private authHttpService: AuthHttpService) { }
 
-  gets(): Observable<TableModel[]> {
+  gets(): Observable<FoodModel[]> {
     return this.authHttpService.get(this.API_PATH)
       .map(res => res.json() || []);
   }
-  get(id): Observable<TableModel> {
+  get(id): Observable<FoodModel> {
     return this.authHttpService.get(this.API_PATH + id).map(res => res.json() || []);
   }
 
-  add(task: TableModel): Observable<TableModel> {
+  add(task: FoodModel): Observable<FoodModel> {
     return this.authHttpService.post(this.API_PATH, task)
       .map(res => res.json());
   }
 
-  put(task: TableModel): Observable<any> {
+  put(task: FoodModel): Observable<any> {
     return this.authHttpService.put(this.API_PATH + "/" + task.id, task);
   }
 
