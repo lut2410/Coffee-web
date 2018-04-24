@@ -7,11 +7,11 @@
         <!-- <select name="selectedTable" class="input custom-select" [(ngModel)]="selectedTable">
           <option *ngFor="let table of tables" [value]="table" (click)="changeToCategory(table.id)">Table {{table.id}}</option>
       </select> -->
-          <tr *ngFor="let table of tables" style="cursor: pointer">
-
-            <button class="btn btn-warning" (click)="selectTable(table.id)">Table {{table.id}}</button>
+          <tr *ngFor="let table of tables, let i of tables.length" style="cursor: pointer">
+            <input class = "btn  btn-warning" type="radio" name="table-radio" (click)="selectTable(table.id)" checked>Table {{table.id}}
 
           </tr>
+         
 
       </div>
     </div>
@@ -37,6 +37,14 @@
           <div class='col-md-4'>
             <button type="button" class="btn btn-primary">Thêm món</button>
           </div>
+          <!--  -->
+          <div class='col-md-12'>
+          <food-widget-list [listFood]="listFoodInCategory"></food-widget-list>
+          <tr *ngFor="let food of listFoodInCategory" style="cursor: pointer">
+              <input type="radio" name="food-radio" (click)="selectFood(food)">{{food.name}}
+          </tr>
+        </div>
+          <!--  -->
         </div>
       </div>
     </div>

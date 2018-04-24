@@ -21,6 +21,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { FoodService } from './service/food.service';
 import { CategoryFoodService } from './service/category-food.service';
+import { FoodWidgetBoxComponent } from './share/food-widget-box/food-widget-box.component';
+import { FoodWidgetListComponent } from './share/food-widget-list/food-widget-list.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { CategoryFoodService } from './service/category-food.service';
     FooterComponent,
     LoginFormComponent,
     ManagementFormComponent,
+    FoodWidgetBoxComponent,
+    FoodWidgetListComponent,
   ],
   imports: [
     BrowserModule,
