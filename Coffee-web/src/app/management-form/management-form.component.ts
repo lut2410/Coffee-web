@@ -27,6 +27,7 @@ export class ManagementFormComponent implements OnInit {
     this.tableService.gets().subscribe(result => {
       this.tables = result
       // this.selectedTable=this.tables[0]
+      console.log(this.tables[0]);
     })
     this.categoryFoodService.gets().subscribe(result => {
       this.categoryFoods = result
@@ -55,6 +56,7 @@ export class ManagementFormComponent implements OnInit {
   }
   selectFood(food){
     this.selectedFood=food;
+    console.log(this.selectedFood)
   }
 }
 

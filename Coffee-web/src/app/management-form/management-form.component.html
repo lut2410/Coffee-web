@@ -7,11 +7,31 @@
         <!-- <select name="selectedTable" class="input custom-select" [(ngModel)]="selectedTable">
           <option *ngFor="let table of tables" [value]="table" (click)="changeToCategory(table.id)">Table {{table.id}}</option>
       </select> -->
-          <tr *ngFor="let table of tables, let i of tables.length" style="cursor: pointer">
-            <input class = "btn  btn-warning" type="radio" name="table-radio" (click)="selectTable(table.id)" checked>Table {{table.id}}
 
+        <div class='row'>
+            <p>{{tables[0].name}}</p>
+            <div class='col-md-4 box-padding-5px'>
+                <input type="radio" id="{{tables[0].name}}" name="select_table" checked (click)="selectTable(tables[0].id)">
+                <label for="{{tables[0].name}}">
+                  <img src="{{tables[0].image}}" height="100" width="100" />
+                  <p>{{tables[0].name}}</p>
+                </label>
+              </div>
+
+          <tr *ngFor="let table of tables">
+            <div class='col-md-4 box-padding-5px'>
+              <input type="radio" id="1" name="select_table" (click)="selectTable(table.id)">
+              <label for="1">
+                <img src="{{table.image}}" height="100" width="100" />
+                <p>{{table.name}}</p>
+              </label>
+            </div>
+  
           </tr>
-         
+        </div>
+
+        
+
 
       </div>
     </div>
@@ -28,22 +48,34 @@
               </select>
             </div>
           </div>
-          <div class='col-md-2' style ="padding:0">
+          <div class='col-md-2' style="padding:0">
             <div class="input ">
               <label>Số lượng</label>
-              <input class="input" type="number" style ="width:100%">
+              <input class="input" type="number" style="width:100%">
             </div>
           </div>
           <div class='col-md-4'>
             <button type="button" class="btn btn-primary">Thêm món</button>
           </div>
-          <!--  -->
-          <div class='col-md-12'>
-          <food-widget-list [listFood]="listFoodInCategory"></food-widget-list>
+          <!-- <food-widget-list [listFood]="listFoodInCategory"></food-widget-list> -->
           <tr *ngFor="let food of listFoodInCategory" style="cursor: pointer">
-              <input type="radio" name="food-radio" (click)="selectFood(food)">{{food.name}}
+            <!-- <input type="radio" name="food-radio" (click)="selectFood(food)">{{food.name}} -->
+            <!-- <div class='col-md-4'>
+              <button type="submit" class="btn-food">
+                <img src="{{food.image}}" height="100" width="100" />
+                <br/> {{food.name}}
+              </button>
+            </div> -->
+
+            <div class='col-md-4 box-padding-5px'>
+              <input type="radio" id="{{food.id}}" name="select_food">
+              <label for="{{food.id}}">
+                <img src="{{food.image}}" height="100" width="100" />
+                <p>{{food.name}}</p>
+              </label>
+            </div>
+
           </tr>
-        </div>
           <!--  -->
         </div>
       </div>

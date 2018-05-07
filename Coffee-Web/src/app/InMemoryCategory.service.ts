@@ -2,16 +2,21 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryCategory implements InMemoryDbService {
   createDb() {
     let table = [
-      { id: 1, status: 1 , itemsOfBill:[{idFood: "12fsd",
+      { id: 1, name: "Bàn số 1", status: 1 , itemsOfBill:[{idFood: "12fsd",
         nameFood: "Mực hấp",
         price: 20,
         quantity: 2,
         totalPrice: 40}],
         total: 40
       },
-      { id: 2, status: 0 },
-      { id: 3, status: 0 },
-      { id: 4, status: 1 }
+      { id: 2, name: "Bàn số 2", status: 0 },
+      { id: 3, name: "Bàn số 3", status: 0 },
+      { id: 4, name: "Bàn số 4", status: 1, itemsOfBill:[{idFood: "12fsd",
+      nameFood: "Mực hấp",
+      price: 20,
+      quantity: 2,
+      totalPrice: 40}],
+      total: 40 }
     ];
     let food = [
       {
